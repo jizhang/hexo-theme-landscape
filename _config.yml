@@ -3,8 +3,8 @@
 # ===============
 # Navigation menu
 menu:
-  Home: /
-  Archives: /archives
+  # Home: /
+  # Archives: /archives
 # RSS link
 rss: /atom.xml
 # Path of title banner image of page top
@@ -43,12 +43,12 @@ copyright:
 # Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
 sidebar: right
 # Widgets displaying in sidebar
-widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
+widgets: []
+# - category
+# - tag
+# - tagcloud
+# - archive
+# - recent_posts
 
 # ===============
 # Widget behavior
