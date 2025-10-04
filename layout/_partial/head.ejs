@@ -20,6 +20,17 @@
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <% if (page.alt_zh) { %>
+    <link rel="alternate" hreflang="en" href="<%= page.permalink %>">
+    <link rel="alternate" hreflang="zh" href="<%- full_url_for('zh/' + page.alt_zh) %>">
+    <link rel="alternate" hreflang="x-default" href="<%= page.permalink %>">
+  <% } else if (page.alt_en) { %>
+    <link rel="alternate" hreflang="en" href="<%- full_url_for('../' + page.alt_en) %>">
+    <link rel="alternate" hreflang="zh" href="<%= page.permalink %>">
+    <link rel="alternate" hreflang="x-default" href="<%- full_url_for('../' + page.alt_en) %>">
+  <% } %>
+
   <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (config.feed) { %>
     <%- feed_tag() %>
