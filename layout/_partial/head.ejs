@@ -23,7 +23,7 @@
 
   <%
   var alternate = null
-  if ((is_home() || (is_category() && !is_category('Translation')) || is_archive()) && page.current === 1) {
+  if ((is_home() || (is_category() && !is_category('Translation'))) && page.current === 1) {
     if (config.language === 'en') {
       alternate = {
         en: page.current_url,
